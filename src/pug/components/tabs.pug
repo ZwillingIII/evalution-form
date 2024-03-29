@@ -1,0 +1,31 @@
+.tabs-wrap
+    ul.nav.tabs#myTab( role="tablist" )
+        li.nav-item()
+            button.nav-link.active#performance-tab(
+                data-bs-toggle="tab",
+                data-bs-target="#performance",
+                type="button",
+                role="tab",
+                aria-controls="performance",
+                aria-selected="true"
+            ) Результативность
+        li.nav-item()
+            button.nav-link#competence-tab(
+                data-bs-toggle="tab",
+                data-bs-target="#competence",
+                type="button",
+                role="tab",
+                aria-controls="competence",
+                aria-selected="true"
+            ) Компетентность
+        li.nav-item()
+            button.nav-link#ipr-tab(
+                data-bs-toggle="tab",
+                data-bs-target="#ipr",
+                type="button",
+                role="tab",
+                aria-controls="ipr",
+                aria-selected="true"
+            ) ИПР
+    .tabs-btn
+        img(src="/assets/images/png/1.png")

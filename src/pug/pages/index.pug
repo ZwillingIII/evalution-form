@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+append variables
+  - var title = 'Оценочная форма';
+
+block content
+    main.main
+        .container
+            h1.title Оценочная форма
+            form.main-form
+                .main-form__top
+                    .main-form__img
+                        img(src="../assets/images/png/person.jpg")
+                    .main-form__personal-data
+                        .main-form__personal-data_fio Петрова Ольга Петровна
+                        .main-form__personal-data_info
+                            .main-form__personal-data_data
+                                .main-form__personal-data_name Должность:
+                                .main-form__personal-data_val Руководитель отдела ******* ***** ********* * ** ******
+                            .main-form__personal-data_data
+                                .main-form__personal-data_name Руководитель:
+                                .main-form__personal-data_val Петренко Виктор Иванович
+                .main-form__bottom
+                    .main-form__estimation
+                        .main-form__estimation-item
+                            .main-form__estimation-title Самооценка
+                            .main-form__estimation-scale.active
+                            .main-form__estimation-frames до **.**
+                        .main-form__estimation-item
+                            .main-form__estimation-title Оценка руководителем
+                            .main-form__estimation-scale
+                            .main-form__estimation-frames до **.**
+                        .main-form__estimation-item
+                            .main-form__estimation-title Диалог с руководителем
+                            .main-form__estimation-scale
+                            .main-form__estimation-frames до **.**
+                        .main-form__estimation-item
+                            .main-form__estimation-title Ознакомление сотрудника
+                            .main-form__estimation-scale
+                            .main-form__estimation-frames до **.**
+                    .main-form__btns
+                        button.btn(type="button") Сохранить
+                        button.btn(type="button",disabled) Отправить
+            include ../components/tabs.pug
+            .tab-content#myTabContent
+                include ../components/performance.pug
+                include ../components/competence.pug
+                include ../components/ipr.pug
+    include ../components/modal.pug
+append styles
+    +style('index.css')

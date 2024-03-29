@@ -1,0 +1,63 @@
+.tab-pane.fade.show#ipr(
+    role="tabpanel",
+    aria-labelledby="ipr-tab",
+)
+    .tab-block#ipr-block-0(
+        data-id='0'
+    )
+        .tab-block__title-wrap#ipr-title-block
+            .block-name#ipr-title
+            img.tab-block__close#ipr-close(
+                src="assets/images/png/12.png",
+                data-id="0"
+            )
+        .tab-block__select#ipr-select__block
+            select.form-select#ipr-select(
+                aria-label="Выберите компетенцию",
+                data-id='0'
+            )
+                option(
+                    selected
+                ) Выберите компетенцию
+        .block-name Выберите индикаторы компетентности (от #[span#tag-count 0] до 3):
+        .tab-block__indicators-wrap
+            p.text#not-competence Список тегов зависит от компетенции
+            .tab-block__indicators-items#ipr-tags
+        .tab-block__comment
+            .block-name Цель:
+            textarea(
+                rows="1",
+                placeholder="Ответь на вопрос, зачем ты развиваешь данную компетенцию и пропиши как ты поймешь, что цель достигнута"
+            )
+        .tab-block__comment
+            .block-name Действия по развитию:
+            textarea(
+                rows="2",
+                placeholder="Заполни действия по развитию. Опиши в свободной форме, что конкретно будет выполняться для развития компетенции и укажи критерии успеха (напиши, как понять, что цель достигнута)"
+            )
+        .tab-block__inputs
+            .tab-block__inputs-wrap.row.g-3
+                .tab-block__inputs-item.col-sm
+                    .block-name Метод развития
+                    select.form-select.tab-block__inputs-input(
+                        aria-label="Выберите компетенцию",
+                    )
+                        option(
+                            selected
+                        ) Выберите метод развития
+                .tab-block__inputs-item.col-sm
+                    .block-name Сделаю до
+                    input.tab-block__inputs-input(
+                        placeholder="Выберите дату"
+                    )
+                .tab-block__inputs-item.col-sm-6
+                    .block-name Поддержка
+                    input.tab-block__inputs-input(
+                        placeholder=""
+                    )
+        .tab-block__save
+            button.btn Сохранить
+    .ipr-plus
+        img(
+            src="assets/images/png/3.png"
+        )

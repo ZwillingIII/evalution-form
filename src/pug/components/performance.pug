@@ -1,0 +1,44 @@
+.tab-pane.fade.show.active.tab-block#performance(
+    role="tabpanel",
+    aria-labelledby="performance-tab"
+)
+    p.text Ознакомься со своими результатами KPI за отчетный период по ссылке: #[span.brown-insert HR-ПОРТАЛ (BURGERKING.RU)].
+    p.text Текст над таблицей можно поменять (примечание в обратной связи от 15-17 февраля)
+    .tab-block__table-wrap
+        table.tab-block__table.table.table-bordered
+            thead
+                tr
+                    th Формулировка цели
+                    th.text-align-center План
+                    th.text-align-center Факт
+                    th.text-align-center % выполнения
+            tbody
+                tr
+                    td Тут подтягивается формулировка цели
+                    td.text-align-center ***
+                    td.text-align-center ***
+                    td.text-align-center ***
+                tr
+                    td Формулировка цели №***, например, ФОТ офиса
+                    td.text-align-center ***
+                    td.text-align-center ***
+                    td.text-align-center ***
+    .tab-block__total
+        .tab-block__total-text.block-name Итоговое выполнение целей
+        .tab-block__total-result ****
+    .tab-block__roller
+        .tab-block__roller-wrap
+            input.tab-block__roller-range#range-slider(
+                type="text",
+                name="tab-range",
+                value=""
+            )
+    p.text Текст под таблицей для добавления (примечания в обратной связи от 15-17 февраля), поэтому резервируем ему место тут)
+    .tab-block__comment
+        .block-name Комментарий сотрудника за оцениваемый период:
+        textarea(
+            rows="2",
+            placeholder="Опишите своими словами, что помогло тебе достигнуть целей в предыдущий период. Что помешало? Какие выводы/уроки ты вынес(-ла) для достижения результатов в текущем году?"
+        )
+    .tab-block__save
+        button.btn Сохранить

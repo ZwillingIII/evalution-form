@@ -1,0 +1,143 @@
+@import variables/vars
+
+.tab-block
+  margin-top: 40px
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3)
+  -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3)
+  box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3)
+  padding: 35px 30px
+  border-radius: 10px
+  color: $brown
+  @media (max-width: 600px)
+    padding: 25px 10px
+  &__save
+    margin-top: 40px
+    display: flex
+    justify-content: right
+  &__indicators
+    &-items
+      display: none
+      width: 80%
+      &.filled-in
+        display: flex
+        gap: 20px
+        flex-direction: row
+        flex-wrap: wrap
+    &-wrap
+      margin-top: 20px
+  &__title
+    &-wrap
+      display: none
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 20px
+      border-bottom: 2px solid $wheat
+      margin-bottom: 40px
+      &.selected
+        display: flex
+  &__close
+    width: 55px
+    height: 55px
+  &__select
+    width: 80%
+    margin-bottom: 40px
+  &__accordion
+    &-collapse
+      margin-top: 20px
+      border-top: 2px solid $wheat
+      padding-top: 20px
+    &-title
+      font-size: 14pt
+      font-family: 'Flame', sans-serif
+    &-value
+      font-size: 18pt
+      font-family: 'Rotonda', sans-serif
+      &.green
+        color: green
+      &.red
+        color: red
+    &-img
+      width: 60px
+      height: 60px
+      background-image: url("../images/png/9.png")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+    &-left
+      display: flex
+      align-items: center
+      gap: 10px
+    &-button
+      display: flex
+      justify-content: space-between
+      width: 100%
+      &:after
+        display: none
+      &.collapsed
+        .tab-block__accordion-img
+          background-image: url("../images/png/8.png")
+  &__table
+    border-color: $wheat
+    margin-top: 40px
+    &-wrap
+      @media (max-width: 600px)
+        overflow: scroll
+    th
+      background-color: $wheat-light
+      font-family: 'Flame', sans-serif
+      font-size: 14pt
+      color: $brown
+    td
+      font-family: 'Rotonda', sans-serif
+      font-size: 14pt
+      color: $brown
+  &__total
+    margin: 50px 0
+    display: flex
+    gap: 20px
+    align-items: center
+    &-result
+      padding: 20px 50px
+      border: 1px solid $wheat
+      border-radius: 10px
+      font-size: 14pt
+      font-family: 'Rotonda', sans-serif
+      @media (max-width: 370px)
+        padding: 20px 30px
+  &__comment
+    margin-top: 50px
+  &__inputs
+    margin-top: 25px
+    &-input
+      margin-top: 10px
+
+.competence-table
+  td,
+  th
+    width: 20%
+    height: 115px
+    vertical-align: middle
+    padding-left: 15px
+    &.green
+      background-color: $cell-back
+
+.tag-btn
+  font-family: 'Rotonda', sans-serif
+  font-size: 14pt
+  color: $brown
+  padding: 10px 20px
+  &-radio:checked + label
+    background-color: $wheat-light
+    border-radius: 15px
+.ipr
+  &-plus
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 25px 0
+    margin-top: 40px
+    background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: moccasin; stroke-width: 4; stroke-dasharray: 10 20'/></svg>")
+    border-radius: 10px
+    img
+      width: 55px
+      height: 55px
